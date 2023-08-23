@@ -1,0 +1,384 @@
+@charset "UTF-8";
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #f1e6d2; }
+
+a {
+  text-decoration: none; }
+
+a:visited {
+  color: #333333; }
+
+ul {
+  list-style: none; }
+
+:root {
+  font-size: 16px;
+  color: #333333;
+  font-family: 'Raleway', sans-serif; }
+
+h1 {
+  font-size: 2rem; }
+
+h2 {
+  font-size: 1.5rem; }
+
+h3, h4 {
+  font-size: 1.12rem; }
+
+h5 {
+  font-size: 0.8rem; }
+
+h6 {
+  font-size: 0.7rem; }
+
+.nav {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 0 0.5rem;
+  justify-content: space-between;
+  align-content: center;
+  position: fixed;
+  z-index: +2; }
+  .nav_logo a img {
+    height: 8vh;
+    padding-top: 1vh; }
+  .nav_menu {
+    display: flex;
+    flex-flow: column nowrap;
+    z-index: +2;
+    padding-left: 2rem;
+    position: fixed;
+    top: 10vh;
+    left: 100%;
+    width: 100vw;
+    height: 90vh;
+    background-color: #4697b4;
+    transition: left 0.5s;
+    max-width: 700px; }
+    .nav_menu .menu_list {
+      padding-top: 1rem;
+      background-color: #4697b4; }
+      .nav_menu .menu_list .list_item {
+        background-color: #4697b4;
+        font-size: 1.3rem;
+        font-weight: 700;
+        height: 2rem;
+        margin-bottom: 1rem;
+        padding-top: 0.25rem; }
+        .nav_menu .menu_list .list_item a {
+          background-color: #4697b4; }
+      .nav_menu .menu_list .list_item.activo {
+        background-color: #254b5e; }
+        .nav_menu .menu_list .list_item.activo a {
+          background-color: #254b5e;
+          color: #a7d0d2; }
+  .nav_menu.activo {
+    left: 0; }
+  .nav_button {
+    height: 100%; }
+    .nav_button button {
+      height: 100%; }
+      .nav_button button img {
+        height: 100%;
+        object-position: center center;
+        object-fit: cover; }
+
+footer {
+  margin-top: 6rem; }
+  footer .footer_ubicacion h2 {
+    padding-left: 1rem;
+    margin-bottom: 1rem; }
+  footer .footer_ubicacion_contacto, footer .footer_ubicacion_rutas {
+    background-color: #4697b4;
+    width: 80%;
+    margin: 0 10%;
+    padding: 1rem 0.5rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: center;
+    position: relative; }
+    footer .footer_ubicacion_contacto h3, footer .footer_ubicacion_rutas h3 {
+      font-size: 2rem; }
+    footer .footer_ubicacion_contacto h3,
+    footer .footer_ubicacion_contacto p, footer .footer_ubicacion_rutas h3,
+    footer .footer_ubicacion_rutas p {
+      background-color: #4697b4;
+      text-align: center;
+      margin-bottom: 1rem; }
+      footer .footer_ubicacion_contacto h3 svg,
+      footer .footer_ubicacion_contacto p svg, footer .footer_ubicacion_rutas h3 svg,
+      footer .footer_ubicacion_rutas p svg {
+        background: none; }
+    footer .footer_ubicacion_contacto a, footer .footer_ubicacion_rutas a {
+      background-color: #254b5e;
+      color: #f1e6d2;
+      width: 70%;
+      height: 3rem;
+      font-size: 1.5rem;
+      margin: 0 15%;
+      text-align: center;
+      padding-top: 0.65rem;
+      font-weight: bold; }
+  footer .footer_ubicacion_mapa {
+    height: 60vh;
+    width: 100%; }
+  footer .footer_ubicacion_rutas ul {
+    background-color: #4697b4; }
+    footer .footer_ubicacion_rutas ul li,
+    footer .footer_ubicacion_rutas ul span {
+      background-color: #4697b4;
+      height: 3rem;
+      text-align: center; }
+      footer .footer_ubicacion_rutas ul li svg,
+      footer .footer_ubicacion_rutas ul span svg {
+        background: none; }
+      footer .footer_ubicacion_rutas ul li button,
+      footer .footer_ubicacion_rutas ul span button {
+        background-color: #4697b4; }
+      footer .footer_ubicacion_rutas ul li a,
+      footer .footer_ubicacion_rutas ul span a {
+        padding: 0;
+        background-color: #4697b4;
+        color: #333333;
+        font-size: 1rem; }
+    footer .footer_ubicacion_rutas ul li {
+      display: flex;
+      justify-content: center;
+      border: 0; }
+      footer .footer_ubicacion_rutas ul li span:last-child {
+        width: 80%; }
+  footer .footer_separador {
+    background: #254B5E;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    height: 0.3rem;
+    width: 50%;
+    margin: 1.5rem 25%; }
+  footer .footer_logo {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center; }
+    footer .footer_logo p {
+      font-family: 'Satisfy', cursive;
+      font-size: 1.1rem;
+      color: #02B8E0; }
+    footer .footer_logo p:last-child {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.5rem;
+      font-weight: 300;
+      color: #0B95D6;
+      margin-top: -0.5rem; }
+  footer .footer_redes_list {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    margin: 1rem; }
+
+.home_main {
+  position: relative;
+  top: 10vh;
+  width: 100%;
+  overflow: hidden; }
+  .home_main .reservas {
+    position: fixed;
+    width: 7%;
+    top: 30vh;
+    left: 93%;
+    writing-mode: vertical-rl;
+    /* Establece la dirección vertical del texto */
+    text-orientation: upright;
+    /* Mantiene las letras en posición vertical */
+    white-space: nowrap;
+    /* Evita que el texto se divida en varias líneas */
+    z-index: +2;
+    border-radius: 0.5rem 0 0 0.5rem;
+    background-color: #4697b4;
+    padding: 0.25rem 0;
+    box-shadow: -2px 3px 4px 0px rgba(0, 0, 0, 0.9);
+    letter-spacing: -5px;
+    font-weight: bolder; }
+    .home_main .reservas a {
+      background-color: #4697b4; }
+  .home_main_titulo {
+    background-image: url(../../assets/portada.jpg);
+    height: 90vh;
+    width: 100%;
+    padding-top: 50%; }
+  .home_main_bungalows {
+    padding-top: 3rem; }
+    .home_main_bungalows h2 {
+      margin-bottom: 1rem;
+      padding-left: 1rem; }
+    .home_main_bungalows_reservas {
+      background-color: #4697b4;
+      width: 70%;
+      margin: 0 15%;
+      padding: 1rem 0.5rem;
+      display: flex;
+      flex-flow: column nowrap;
+      align-content: center;
+      z-index: +1;
+      position: relative; }
+      .home_main_bungalows_reservas h3,
+      .home_main_bungalows_reservas p {
+        background-color: #4697b4;
+        text-align: center;
+        margin-bottom: 1rem; }
+      .home_main_bungalows_reservas a {
+        background-color: #254b5e;
+        color: #f1e6d2;
+        width: 70%;
+        height: 3rem;
+        font-size: 1.5rem;
+        margin: 0 15%;
+        text-align: center;
+        padding-top: 0.65rem;
+        font-weight: bold; }
+    .home_main_bungalows_carrousel {
+      margin-top: -2rem;
+      width: 100%;
+      height: 40%;
+      overflow: hidden; }
+      .home_main_bungalows_carrousel .home_carrousel_list {
+        display: flex;
+        flex-flow: row nowrap;
+        width: 500%;
+        height: 100%;
+        margin-bottom: -2rem;
+        transition: transform 0.5s ease-in-out; }
+        .home_main_bungalows_carrousel .home_carrousel_list_item {
+          width: 100vw;
+          height: 100%;
+          position: static; }
+          .home_main_bungalows_carrousel .home_carrousel_list_item img {
+            width: 100%;
+            object-fit: cover;
+            object-position: center center; }
+          .home_main_bungalows_carrousel .home_carrousel_list_item h3 {
+            background-color: #254b5e;
+            color: #f1e6d2;
+            width: 50%;
+            height: 2rem;
+            font-size: 1.75rem;
+            font-weight: bold;
+            position: relative;
+            z-index: +1;
+            left: 50%;
+            top: -3rem;
+            text-align: center; }
+  .home_main_predio {
+    padding: 1rem;
+    background-color: #a7d0d2;
+    margin-top: 2rem; }
+    .home_main_predio h2,
+    .home_main_predio h3 {
+      margin-bottom: 0.25rem;
+      background-color: #a7d0d2;
+      padding-left: 1rem; }
+    .home_main_predio h3 {
+      padding-left: 2rem;
+      margin-bottom: 1rem; }
+    .home_main_predio_imagenes {
+      position: static;
+      width: 90%;
+      margin: 0 5%;
+      display: flex;
+      flex-flow: column nowrap; }
+      .home_main_predio_imagenes .predio_imagen {
+        width: 100%;
+        height: 100%/3;
+        background-color: #a7d0d2;
+        padding: 1rem 0; }
+        .home_main_predio_imagenes .predio_imagen img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center center; }
+    .home_main_predio_desc {
+      background-image: url(../../assets/desc.jpg);
+      padding: 6rem 0;
+      margin-top: 2rem; }
+      .home_main_predio_desc .predio_desc {
+        background-color: #4697b4;
+        width: 70%;
+        margin: 0 15%;
+        padding: 1rem 0.5rem;
+        display: flex;
+        flex-flow: column nowrap;
+        align-content: center;
+        z-index: +1;
+        position: relative; }
+        .home_main_predio_desc .predio_desc h3 {
+          padding: 0; }
+        .home_main_predio_desc .predio_desc h3,
+        .home_main_predio_desc .predio_desc p {
+          background-color: #4697b4;
+          text-align: center;
+          margin-bottom: 1rem; }
+        .home_main_predio_desc .predio_desc a {
+          background-color: #254b5e;
+          color: #f1e6d2;
+          width: 70%;
+          height: 3rem;
+          font-size: 1.2rem;
+          margin: 0 15%;
+          text-align: center;
+          padding-top: 0.8rem;
+          font-weight: bold; }
+
+@media (min-width: 768px) {
+  .home_main .reservas {
+    width: 4%;
+    left: 96%; }
+  .home_main_titulo {
+    height: 70vh;
+    padding-top: 30%; }
+  .home_main_bungalows {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: 6rem auto;
+    grid-template-areas: "bungalows carrousel" "reservar carrousel";
+    width: 90%;
+    padding: 0;
+    margin: 3rem 5%; }
+    .home_main_bungalows h2 {
+      grid-area: bungalows;
+      text-align: center;
+      align-self: center; }
+    .home_main_bungalows_carrousel {
+      grid-area: carrousel;
+      padding-top: 2rem;
+      height: 100%; }
+      .home_main_bungalows_carrousel .home_carrousel_list_item img {
+        height: 100%; }
+    .home_main_bungalows_reservas {
+      grid-area: reservar;
+      margin: 0 0 0 20%;
+      width: 100%;
+      height: max-content; }
+  .home_main_predio h2 {
+    height: 3rem;
+    padding-top: 1rem; }
+  .home_main_predio_imagenes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "primera imagen1" "primera imagen2"; }
+    .home_main_predio_imagenes .predio_imagen.primera {
+      grid-area: primera;
+      height: 100%;
+      padding: 0 1rem 0 0; }
+    .home_main_predio_imagenes .predio_imagen.imagen1 {
+      grid-area: imagen1;
+      padding: 0 0 0.5rem 0; }
+    .home_main_predio_imagenes .predio_imagen.imagen2 {
+      grid-area: imagen2;
+      padding: 0.5rem 0 0 0; }
+  .home_main_predio_desc .predio_desc {
+    margin: 0 0 0 50%;
+    width: 50%; } }

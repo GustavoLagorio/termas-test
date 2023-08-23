@@ -1,0 +1,20 @@
+//Configuraciones generales
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: $background;
+}
+
+a {
+    text-decoration: none;    
+}
+
+a:visited {
+    color: $fonts;
+}
+
+ul {
+    list-style: none;
+}

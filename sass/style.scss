@@ -1,0 +1,11 @@
+//GLOBAL
+@import "./globals/vars";
+@import "./globals/reset";
+@import "./globals/fonts";
+
+//LAYOUT
+@import "./layout/nav";
+@import "./layout/footer";
+
+//VIEWS
+@import "./views/index";

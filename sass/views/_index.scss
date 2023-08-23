@@ -1,0 +1,300 @@
+.home_main {
+    position: relative;
+    top: 10vh;
+    width: 100%;
+    overflow: hidden;
+
+    .reservas {
+        position: fixed;
+        width: 7%;
+        top: 30vh;
+        left: 93%;
+        writing-mode: vertical-rl;
+        /* Establece la dirección vertical del texto */
+        text-orientation: upright;
+        /* Mantiene las letras en posición vertical */
+        white-space: nowrap;
+        /* Evita que el texto se divida en varias líneas */
+        z-index: +2;
+        border-radius: 0.5rem 0 0 0.5rem;
+        background-color: $mid-blue;
+        padding: 0.25rem 0;
+        box-shadow: -2px 3px 4px 0px rgba(0, 0, 0, 0.90);
+        letter-spacing: -5px;
+        font-weight: bolder;
+
+        a {
+            background-color: $mid-blue;
+        }
+    }
+
+    &_titulo {
+        background-image: url(../../assets/portada.jpg);
+        height: 90vh;
+        width: 100%;
+        padding-top: 50%;
+    }
+
+    &_bungalows {
+        padding-top: 3rem;
+
+        h2 {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+        }
+
+        &_reservas {
+            background-color: $mid-blue;
+            width: 70%;
+            margin: 0 15%;
+            padding: 1rem 0.5rem;
+            display: flex;
+            flex-flow: column nowrap;
+            align-content: center;
+            z-index: +1;
+            position: relative;
+
+            h3,
+            p {
+                background-color: $mid-blue;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+
+            a {
+                background-color: $dark-blue;
+                color: $background;
+                width: 70%;
+                height: 3rem;
+                font-size: 1.5rem;
+                margin: 0 15%;
+                text-align: center;
+                padding-top: 0.65rem;
+                font-weight: bold;
+            }
+        }
+
+        &_carrousel {
+            margin-top: -2rem;
+            width: 100%;
+            height: 40%;
+            overflow: hidden;
+
+            .home_carrousel_list {
+                display: flex;
+                flex-flow: row nowrap;
+                width: 500%;
+                height: 100%;
+                margin-bottom: -2rem;
+                transition: transform 0.5s ease-in-out;                
+
+                &_item {
+                    width: 100vw;
+                    height: 100%;
+                    position: static;                    
+
+                    img {
+                        width: 100%;                        
+                        object-fit: cover;
+                        object-position: center center;
+                    }
+
+                    h3 {
+                        background-color: $dark-blue;
+                        color: $background;
+                        width: 50%;
+                        height: 2rem;
+                        font-size: 1.75rem;
+                        font-weight: bold;
+                        position: relative;
+                        z-index: +1;
+                        left: 50%;
+                        top: -3rem;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    &_predio {
+        padding: 1rem;
+        background-color: $ligth-blue;
+        margin-top: 2rem;
+
+        h2,
+        h3 {
+            margin-bottom: 0.25rem;
+            background-color: $ligth-blue;
+            padding-left: 1rem;
+        }
+
+        h3 {
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        &_imagenes {
+            position: static;
+            width: 90%;
+            margin: 0 5%;
+            display: flex;
+            flex-flow: column nowrap;
+
+            .predio_imagen {
+                width: 100%;
+                height: 100%/3;
+                background-color: $ligth-blue;
+                padding: 1rem 0;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center center;
+                }
+            }
+        }
+
+        &_desc {
+            background-image: url(../../assets/desc.jpg);
+            padding: 6rem 0;
+            margin-top: 2rem;
+
+            .predio_desc {
+                background-color: $mid-blue;
+                width: 70%;
+                margin: 0 15%;
+                padding: 1rem 0.5rem;
+                display: flex;
+                flex-flow: column nowrap;
+                align-content: center;
+                z-index: +1;
+                position: relative;
+
+                h3 {
+                    padding: 0;
+                }
+
+                h3,
+                p {
+                    background-color: $mid-blue;
+                    text-align: center;
+                    margin-bottom: 1rem;
+                }
+
+                a {
+                    background-color: $dark-blue;
+                    color: $background;
+                    width: 70%;
+                    height: 3rem;
+                    font-size: 1.2rem;
+                    margin: 0 15%;
+                    text-align: center;
+                    padding-top: 0.8rem;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+//Responsive
+
+@media (min-width: $sc-mid) {
+
+    .home_main {
+
+        .reservas {
+            width: 4%;
+            left: 96%;
+        }
+
+        &_titulo {
+            height: 70vh;
+            padding-top: 30%;
+        }
+
+        &_bungalows {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            grid-template-rows: 6rem auto;
+            grid-template-areas: 
+            "bungalows carrousel"
+            "reservar carrousel";
+            width: 90%;
+            padding: 0;
+            margin: 3rem 5%;
+
+            h2 {
+                grid-area: bungalows;
+                text-align: center;
+                align-self: center;
+            }
+
+            &_carrousel {
+                grid-area: carrousel;
+                padding-top: 2rem;
+                height: 100%;
+
+                .home_carrousel_list {
+
+                    &_item {                        
+
+                        img {
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+
+            &_reservas {
+                grid-area: reservar;
+                margin: 0 0 0 20%;
+                width: 100%;
+                height: max-content;
+            }
+        }
+
+        &_predio {
+
+            h2 {
+                height: 3rem;
+                padding-top: 1rem;                
+            }
+
+            &_imagenes {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                grid-template-areas: 
+                "primera imagen1"
+                "primera imagen2";                
+
+                .predio_imagen.primera {
+                    grid-area: primera;
+                    height: 100%;
+                    padding: 0 1rem 0 0;
+                }
+
+                .predio_imagen.imagen1 {
+                    grid-area: imagen1;
+                    padding: 0 0 0.5rem 0;
+                }
+
+                .predio_imagen.imagen2 {
+                    grid-area: imagen2;
+                    padding: 0.5rem 0 0 0;
+                }
+            }
+
+            &_desc {
+
+                .predio_desc {
+                    margin: 0 0 0 50%;
+                    width: 50%;
+                }
+            }
+        }
+    }
+}

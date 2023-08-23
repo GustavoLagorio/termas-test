@@ -1,0 +1,132 @@
+footer {
+    margin-top: 6rem;
+
+    .footer_ubicacion {
+
+        h2 {
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        &_contacto,
+        &_rutas {
+            background-color: $mid-blue;
+            width: 80%;
+            margin: 0 10%;
+            padding: 1rem 0.5rem;
+            display: flex;
+            flex-flow: column nowrap;
+            align-content: center;
+            position: relative;
+
+            h3 {
+                font-size: 2rem;
+            }
+
+            h3,
+            p {
+                background-color: $mid-blue;
+                text-align: center;
+                margin-bottom: 1rem;
+
+                svg {
+                    background: none;
+                }
+            }
+
+            a {
+                background-color: $dark-blue;
+                color: $background;
+                width: 70%;
+                height: 3rem;
+                font-size: 1.5rem;
+                margin: 0 15%;
+                text-align: center;
+                padding-top: 0.65rem;
+                font-weight: bold;
+            }
+        }
+
+        &_mapa {
+            height: 60vh;
+            width: 100%;
+        }
+
+        &_rutas {
+
+            ul {
+                background-color: $mid-blue;
+
+                li,
+                span {
+                    background-color: $mid-blue;
+                    height: 3rem;
+                    text-align: center;
+
+                    svg {
+                        background: none;
+                    }
+
+                    button {
+                        background-color: $mid-blue;
+                    }
+
+                    a {
+                        padding: 0;
+                        background-color: $mid-blue;
+                        color: $fonts;
+                        font-size: 1rem;
+                    }
+                }
+
+                li {
+                    display: flex;
+                    justify-content: center;
+                    border: 0;
+
+                    span:last-child {
+                        width: 80%;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer_separador {
+        background: #254B5E;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        height: 0.3rem;
+        width: 50%;
+        margin: 1.5rem 25%;
+    }
+
+    .footer_logo {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+
+        p {
+            font-family: 'Satisfy', cursive;
+            font-size: 1.1rem;
+            color: #02B8E0;
+        }
+
+        p:last-child {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.5rem;
+            font-weight: 300;
+            color: #0B95D6;
+            margin-top: -0.5rem;
+        }
+    }
+
+    .footer_redes {
+
+        &_list {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-evenly;
+            margin: 1rem;
+        }
+    }
+}

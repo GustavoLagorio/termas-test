@@ -1,0 +1,85 @@
+.nav {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 0 0.5rem;
+    justify-content: space-between;
+    align-content: center;
+    position: fixed;
+    z-index: +2;
+
+    &_logo {
+                
+        a {
+
+            img {
+                height: 8vh;
+                padding-top: 1vh;
+            }
+        }
+    }
+
+    &_menu {
+        display: flex;
+        flex-flow: column nowrap;
+        z-index: +2;
+        padding-left: 2rem;
+        position: fixed;
+        top: 10vh;
+        left: 100%;
+        width: 100vw;
+        height: 90vh;
+        background-color: $mid-blue;
+        transition: left 0.5s;
+        max-width: 700px;
+
+        
+
+        .menu_list {
+            padding-top: 1rem;
+            background-color: $mid-blue;
+            
+
+            .list_item {
+                background-color: $mid-blue;                
+                font-size: 1.3rem;
+                font-weight: 700;
+                height: 2rem;
+                margin-bottom: 1rem;
+                padding-top: 0.25rem;                                
+
+                a {                                        
+                    background-color: $mid-blue;                                        
+                }
+            }
+            
+            .list_item.activo {
+                background-color: $dark-blue;
+
+                a {
+                    background-color: $dark-blue;
+                    color: $ligth-blue;
+                }
+            }
+        }
+    }
+
+    &_menu.activo {        
+        left: 0;
+    }
+
+    &_button {
+        height: 100%;
+
+        button {
+            height: 100%;
+            
+            img {
+                height: 100%;
+                object-position: center center;
+                object-fit: cover;
+            }
+        }
+    }
+}
