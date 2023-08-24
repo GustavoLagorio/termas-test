@@ -330,7 +330,8 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     grid-template-rows: 6rem auto;
-    grid-template-areas: "bungalows carrousel" "reservar carrousel";
+    grid-template-areas: "bungalows carrousel"
+ "reservar carrousel";
     width: 90%;
     padding: 0;
     margin: 3rem 5%; }
@@ -356,7 +357,8 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: "primera imagen1" "primera imagen2"; }
+    grid-template-areas: "primera imagen1"
+ "primera imagen2"; }
     .home_main_predio_imagenes .predio_imagen.primera {
       grid-area: primera;
       height: 100%;
@@ -426,7 +428,9 @@ footer {
     display: grid;
     grid-template-columns: 55vw 45vw;
     grid-template-rows: 15vh 40vh 20vh;
-    grid-template-areas: "titulo imagen" "p imagen" "btn imagen"; }
+    grid-template-areas: "titulo imagen"
+ "p imagen"
+ "btn imagen"; }
     .bungalows_main_list_bungalow.par h2 {
       grid-area: titulo;
       padding: 2rem 0 0 2rem; }
@@ -446,7 +450,9 @@ footer {
     display: grid;
     grid-template-columns: 45vw 55vw;
     grid-template-rows: 15vh 40vh 20vh;
-    grid-template-areas: "imagen titulo" "imagen p" "imagen btn";
+    grid-template-areas: "imagen titulo"
+ "imagen p"
+ "imagen btn";
     align-content: center; }
     .bungalows_main_list_bungalow h2 {
       grid-area: titulo;
@@ -461,4 +467,4 @@ footer {
       grid-area: imagen;
       height: 100%;
       margin: 0;
-      width: 100%; } }
+      width: 100%;  } }
