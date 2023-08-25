@@ -11,12 +11,13 @@
         background-repeat: no-repeat;        
 
         h1 {
-            position: relative;
-            z-index: +1;
-            top: 3rem;
+            font-style: italic;
+            font-size: 2.5rem;
+            font-weight: bold;
             background: none;
-            padding-left: 2rem;
+            -webkit-text-stroke: 1px $dark-blue;
             color: $background;
+            padding: 10% 0 0 5%;
         }
     }
 

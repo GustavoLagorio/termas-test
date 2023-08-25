@@ -32,8 +32,32 @@
         background-image: url(../assets/portada.jpg);
         height: 90vh;
         width: 100%;
-        padding-top: 50%;
-        
+        padding-top: 40%;
+
+        p {
+            font-style: italic;
+            font-size: 2.5rem;
+            font-weight: bold;
+            background: none;
+            -webkit-text-stroke: 1px $dark-blue;
+            color: $background;
+            padding-left: 5%;
+        }
+
+        .txt-bungalows {
+            padding-left: 10%;
+        }
+
+        .txt-basavilbaso {
+            padding-left: 15%;
+            margin-bottom: 1rem;
+        }
+
+        .txt-slogan {
+            font-size: 1.2rem;
+            padding-left: 20%;
+        }
+
     }
 
     &_bungalows {
@@ -62,8 +86,8 @@
                 margin-bottom: 1rem;
             }
 
-            a {                
-                color: $background;               
+            a {
+                color: $background;
             }
         }
 
@@ -79,15 +103,15 @@
                 width: 500%;
                 height: 100%;
                 margin-bottom: -2rem;
-                transition: transform 0.5s ease-in-out;                
+                transition: transform 0.5s ease-in-out;
 
                 &_item {
                     width: 100vw;
                     height: 100%;
-                    position: static;                    
+                    position: static;
 
                     img {
-                        width: 100%;                        
+                        width: 100%;
                         object-fit: cover;
                         object-position: center center;
                     }
@@ -176,9 +200,9 @@
                     margin-bottom: 1rem;
                 }
 
-                a {                    
+                a {
                     color: $background;
-                    font-size: 1.2rem;                    
+                    font-size: 1.2rem;
                 }
             }
         }
@@ -198,16 +222,19 @@
 
         &_titulo {
             height: 70vh;
-            padding-top: 30%;
+            padding-top: 10%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100vw;
         }
 
         &_bungalows {
             display: grid;
             grid-template-columns: 1fr 1.5fr;
             grid-template-rows: 6rem auto;
-            grid-template-areas: 
-            "bungalows carrousel"
-            "reservar carrousel";
+            grid-template-areas:
+                "bungalows carrousel"
+                "reservar carrousel";
             width: 90%;
             padding: 0;
             margin: 3rem 5%;
@@ -225,7 +252,7 @@
 
                 .home_carrousel_list {
 
-                    &_item {                        
+                    &_item {
 
                         img {
                             height: 100%;
@@ -246,16 +273,16 @@
 
             h2 {
                 height: 3rem;
-                padding-top: 1rem;                
+                padding-top: 1rem;
             }
 
             &_imagenes {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 grid-template-rows: 1fr 1fr;
-                grid-template-areas: 
-                "primera imagen1"
-                "primera imagen2";                
+                grid-template-areas:
+                    "primera imagen1"
+                    "primera imagen2";
 
                 .predio_imagen.primera {
                     grid-area: primera;
@@ -281,6 +308,16 @@
                     width: 50%;
                 }
             }
+        }
+    }
+}
+
+@media (min-width: $sc-lg) {
+    .home_main {
+
+        .reservas {
+            width: 1.5rem;
+            left: 98%;
         }
     }
 }

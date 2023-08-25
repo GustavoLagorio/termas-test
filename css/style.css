@@ -7,7 +7,8 @@
   background-color: #f1e6d2; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #333333; }
 
 a:visited {
   color: #333333; }
@@ -53,12 +54,32 @@ h6 {
   flex-flow: row nowrap;
   padding: 0 0.5rem;
   justify-content: space-between;
-  align-content: center;
   position: fixed;
   z-index: +2; }
-  .nav_logo a img {
-    height: 8vh;
-    padding-top: 1vh; }
+  .nav_logo {
+    height: 10vh;
+    overflow: hidden;
+    justify-self: left;
+    width: 15%; }
+    .nav_logo svg {
+      height: 80%;
+      padding-top: 0.5rem;
+      width: 100%; }
+  .nav_titulo {
+    width: 70%;
+    justify-self: center;
+    align-self: center;
+    text-align: center; }
+    .nav_titulo p {
+      font-family: 'Satisfy', cursive;
+      font-size: 1.5rem;
+      color: #02B8E0; }
+    .nav_titulo p:last-child {
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.5rem;
+      font-weight: 300;
+      color: #0B95D6;
+      margin-top: -0.7rem; }
   .nav_menu {
     display: flex;
     flex-flow: column nowrap;
@@ -92,13 +113,45 @@ h6 {
   .nav_menu.activo {
     left: 0; }
   .nav_button {
-    height: 100%; }
+    height: 100%;
+    width: 15%;
+    text-align: right; }
     .nav_button button {
       height: 100%; }
       .nav_button button img {
         height: 100%;
         object-position: center center;
         object-fit: cover; }
+
+@media (min-width: 992px) {
+  .nav_button {
+    display: none; }
+  .nav_menu {
+    position: static;
+    padding: 0;
+    background: none; }
+    .nav_menu .menu_list {
+      display: flex;
+      flex-flow: row nowrap;
+      background: none;
+      justify-content: right;
+      padding: 0;
+      height: 10vh;
+      align-items: center; }
+      .nav_menu .menu_list .list_item {
+        background: none;
+        margin: 0;
+        padding: 0 0.5rem; }
+        .nav_menu .menu_list .list_item a {
+          font-size: 1.1rem;
+          background: none; }
+      .nav_menu .menu_list .list_item:hover {
+        background-color: #254b5e;
+        z-index: +2;
+        scale: 1.1; }
+        .nav_menu .menu_list .list_item:hover a {
+          background-color: #254b5e;
+          color: #f1e6d2; } }
 
 footer {
   margin-top: 6rem; }
@@ -211,7 +264,23 @@ footer {
     background-image: url(../assets/portada.jpg);
     height: 90vh;
     width: 100%;
-    padding-top: 50%; }
+    padding-top: 40%; }
+    .home_main_titulo p {
+      font-style: italic;
+      font-size: 2.5rem;
+      font-weight: bold;
+      background: none;
+      -webkit-text-stroke: 1px #254b5e;
+      color: #f1e6d2;
+      padding-left: 5%; }
+    .home_main_titulo .txt-bungalows {
+      padding-left: 10%; }
+    .home_main_titulo .txt-basavilbaso {
+      padding-left: 15%;
+      margin-bottom: 1rem; }
+    .home_main_titulo .txt-slogan {
+      font-size: 1.2rem;
+      padding-left: 20%; }
   .home_main_bungalows {
     padding-top: 3rem; }
     .home_main_bungalows h2 {
@@ -325,7 +394,10 @@ footer {
     left: 96%; }
   .home_main_titulo {
     height: 70vh;
-    padding-top: 30%; }
+    padding-top: 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw; }
   .home_main_bungalows {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
@@ -371,6 +443,11 @@ footer {
     margin: 0 0 0 50%;
     width: 50%; } }
 
+@media (min-width: 992px) {
+  .home_main .reservas {
+    width: 1.5rem;
+    left: 98%; } }
+
 .bungalows_main {
   position: relative;
   top: 10vh; }
@@ -382,12 +459,13 @@ footer {
     background-size: cover;
     background-repeat: no-repeat; }
     .bungalows_main_titulo h1 {
-      position: relative;
-      z-index: +1;
-      top: 3rem;
+      font-style: italic;
+      font-size: 2.5rem;
+      font-weight: bold;
       background: none;
-      padding-left: 2rem;
-      color: #f1e6d2; }
+      -webkit-text-stroke: 1px #254b5e;
+      color: #f1e6d2;
+      padding: 10% 0 0 5%; }
   .bungalows_main_list_bungalow {
     padding: 2rem 1rem; }
     .bungalows_main_list_bungalow h2 {
