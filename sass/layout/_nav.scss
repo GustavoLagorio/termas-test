@@ -75,12 +75,13 @@
                 }
             }
 
-            .list_item.activo {
-                background-color: $dark-blue;
+            .list_item.activo {                
+                margin-left: 1rem;
 
                 a {
                     background-color: $dark-blue;
                     color: $ligth-blue;
+                    padding: 0 0.5rem;
                 }
             }
         }
@@ -97,12 +98,8 @@
 
         button {
             height: 100%;
-
-            img {
-                height: 100%;
-                object-position: center center;
-                object-fit: cover;
-            }
+            width: 20%;
+            min-width: 1.3rem;
         }
     }
 }

@@ -42,6 +42,7 @@ footer {
         &_mapa {
             height: 60vh;
             width: 100%;
+            z-index: +1;
         }
 
         &_rutas {
@@ -119,6 +120,66 @@ footer {
             flex-flow: row nowrap;
             justify-content: space-evenly;
             margin: 1rem;
+        }
+    }
+}
+
+@media (min-width: $sc-mid) {
+    footer {
+
+        .footer_ubicacion {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 15vh 60vh 30vh;
+            grid-template-areas: 
+            "titulo mapa"
+            "contacto mapa"
+            "rutas rutas";
+            
+            h2 {
+                grid-area: titulo;
+                padding: 2rem 0 0 5rem;
+            }
+
+            &_contacto {
+                grid-area: contacto;
+                height: min-content;
+                margin: 0 0 2rem 7rem;
+                z-index: +1;
+            }
+
+            &_mapa {
+                grid-area: mapa;
+                width: 100%;
+                height: 75vh;
+                border: 1px solid black;
+                z-index: 0;
+            }
+
+            &_rutas {
+                grid-area: rutas;
+                width: 100%;
+                height: 100%;
+                margin: 0;
+
+                ul {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 1fr 1fr;
+                    height: 100%;
+                    justify-items: center;                    
+
+                    li {
+                        height: 2rem;
+                        padding-top: 0.5rem;
+                        width: 35%;
+                        
+                        span {
+                            height: 100%;
+                        }
+                    }
+                }
+            }
         }
     }
 }
