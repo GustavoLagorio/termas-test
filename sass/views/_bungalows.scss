@@ -8,7 +8,7 @@
         background-image: url(../assets/predio1.jpg);
         background-position: center center;
         background-size: cover;
-        background-repeat: no-repeat;        
+        background-repeat: no-repeat;
 
         h1 {
             font-style: italic;
@@ -21,7 +21,36 @@
         }
     }
 
-    &_list {        
+    &_filtro {
+        width: 100%;
+        text-align: center;
+        margin: 2rem 0;
+
+        div,
+        form,
+        h2 {
+            background-color: $mid-blue;
+        }
+
+        form {
+            padding-top: 1rem;
+        }
+
+        label,
+        input,
+        button {
+            margin: 1rem 0;
+            padding: 0.5rem;
+            background-color: $dark-blue;
+            color: $background;
+        }
+
+        button {
+            width: min-content;
+        }
+    }
+
+    &_list {
 
         &_bungalow {
             padding: 2rem 1rem;
@@ -44,15 +73,15 @@
 
                 img {
                     width: 100%;
-                    height: 100%;                    
+                    height: 100%;
                     object-fit: cover;
                     object-position: center center;
                 }
             }
 
-            a{
+            a {
                 color: $background;
-                width: 60%;                
+                width: 60%;
                 display: block;
                 margin: 3rem 27.5% 0 2.5%;
             }
@@ -63,83 +92,93 @@
 
             .bungalows_main_list_bungalow_info {
                 background-color: $ligth-blue;
-                
-                h2, p {
+
+                h2,
+                p {
                     background-color: $ligth-blue;
                 }
             }
 
-            
+
         }
     }
 }
 
 @media (min-width: $sc-mid) {
 
-    .bungalows_main_list_bungalow.par {
-        padding: 0;
-        display: grid;
-        grid-template-columns: 55vw 45vw;
-        grid-template-rows: 15vh 40vh 20vh;
-        grid-template-areas: 
-        "titulo imagen"
-        "p imagen"
-        "btn imagen";
+    .bungalows_main {
 
-        h2 {
-            grid-area: titulo;
-            padding: 2rem 0 0 2rem;
+        &_filtro {
+            width: 70%;
+            text-align: center;
+            margin: 2rem 15%;
         }
 
-        p {
-            grid-area: p;
-            padding: 2rem;
+        &_list_bungalow.par {
+            padding: 0;
+            display: grid;
+            grid-template-columns: 55vw 45vw;
+            grid-template-rows: 15vh 40vh 20vh;
+            grid-template-areas:
+                "titulo imagen"
+                "p imagen"
+                "btn imagen";
+
+            h2 {
+                grid-area: titulo;
+                padding: 2rem 0 0 2rem;
+            }
+
+            p {
+                grid-area: p;
+                padding: 2rem;
+            }
+
+            a {
+                grid-area: btn;
+                margin: 0 0 0 2rem;
+            }
+
+            &_imagenes {
+                grid-area: imagen;
+                height: 100%;
+                margin: 0;
+                width: 100%;
+            }
         }
 
-        a {
-            grid-area: btn;
-            margin: 0 0 0 2rem;
-        }
+        &_list_bungalow {
+            padding: 0;
+            display: grid;
+            grid-template-columns: 45vw 55vw;
+            grid-template-rows: 15vh 40vh 20vh;
+            grid-template-areas:
+                "imagen titulo"
+                "imagen p"
+                "imagen btn";
+            align-content: center;
 
-        &_imagenes {
-            grid-area: imagen;
-            height: 100%;
-            margin: 0;
-            width: 100%;
-        }
-    }
+            h2 {
+                grid-area: titulo;
+                padding: 2rem 0 0 2rem;
+            }
 
-    .bungalows_main_list_bungalow {
-        padding: 0;
-        display: grid;
-        grid-template-columns: 45vw 55vw;
-        grid-template-rows: 15vh 40vh 20vh;
-        grid-template-areas: 
-        "imagen titulo"
-        "imagen p"
-        "imagen btn";
-        align-content: center;
+            p {
+                grid-area: p;
+                padding: 2rem;
+            }
 
-        h2 {
-            grid-area: titulo;
-            padding: 2rem 0 0 2rem;
-        }
+            a {
+                grid-area: btn;
+                margin: 0 0 0 2rem;
+            }
 
-        p {
-            grid-area: p;
-            padding: 2rem;            
-        }
-
-        a {
-            grid-area: btn;
-            margin: 0 0 0 2rem;
-        }
-
-        &_imagenes {
-            grid-area: imagen;
-            height: 100%;
-            margin: 0;
-            width: 100%;
+            &_imagenes {
+                grid-area: imagen;
+                height: 100%;
+                margin: 0;
+                width: 100%;
+            }
         }
     }
 }

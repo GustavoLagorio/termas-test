@@ -1,0 +1,11 @@
+.vanilla-calendar.vanilla-calendar_default,.vanilla-calendar-header,.vanilla-calendar-arrow.vanilla-calendar-arrow_prev,.vanilla-calendar-header__content,.vanilla-calendar-content,.vanilla-calendar-week,.vanilla-calendar-week__day,.vanilla-calendar-days.vanilla-calendar-days_selecting,.vanilla-calendar-day,.vanilla-calendar-day__btn {
+    background-color: $mid-blue;
+}
+
+.vanilla-calendar-day__btn {
+    margin: 0.3rem 0.25rem;
+}
+
+.vanilla-calendar-day__btn.vanilla-calendar-day__btn_disabled {
+    background-color: #254b5eb8;
+}

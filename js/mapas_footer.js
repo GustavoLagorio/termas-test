@@ -13,7 +13,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap'
 }).addTo(map);
 
-mapasFooter.forEach((mapa, index) => {
+/*mapasFooter.forEach((mapa, index) => {
 
     mapa.addEventListener('click', () => {
         console.log(coordenadas[mapa]);
@@ -40,4 +40,4 @@ mapasFooter.forEach((mapa, index) => {
             console.log("Duración: " + duration + " minutos");
         });
     })
-})
+})*/

@@ -7,9 +7,8 @@
     <!-- Mapas -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
-    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
-    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
-    <link rel="stylesheet" href="../css/style.css">
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="../css/style.css"> 
     <!-- Tipografia -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +22,7 @@
     <header>
         <nav class="nav">
             <div class="nav_logo">
-                <a href="./index.html">
+                <a href="../index.html">
                     <svg xmlns="http://www.w3.org/2000/svg" width="104" height="54" viewBox="0 0 104 54" fill="none">
                         <path
                             d="M52.5488 49.3876C44.2125 49.474 37.6859 48.0214 33.6653 46.8647C30.5056 45.9557 22.7404 43.2386 22.7328 39.6783C22.732 39.2884 22.8245 38.9267 23.0386 38.455C25.6746 32.6402 37.4649 30.4674 37.4114 30.2748C37.3908 30.2006 35.6882 30.6211 32.3228 31.4085C31.3274 31.6409 30.0407 31.9406 28.3137 32.4154C28.1524 32.4597 27.5958 32.6134 26.8627 32.8275C26.264 33.0018 24.3428 33.5622 22.8092 34.0973C20.4438 34.923 18.4171 35.65 16.4638 37.3083C15.5387 38.0934 15.1197 38.6714 14.9347 39.3725C14.5785 40.7233 15.2451 41.9427 15.4699 42.3541C16.2642 43.8059 17.5425 44.5161 18.0692 44.8005C24.3222 48.172 27.7785 48.8524 27.7785 48.8524C37.3097 51.1001 49.4051 51.7981 52.5488 51.7576"
@@ -110,7 +109,7 @@
                         <a href="./bungalows.html">Bungalows</a>
                     </li>
                     <li class="list_item">
-                        <a href="">Actividades</a>
+                        <a href="./actividades.html">Actividades</a>
                     </li>
                     <li class="list_item">
                         <a href="">Contacto</a>
@@ -141,7 +140,21 @@
         <div class="bungalows_main_titulo">
             <h1>Bungalows</h1>
         </div>
-        <div class="bungalows_main_list">            
+        <div class="bungalows_main_filtro">            
+            <form action="">
+                <h2>Seleccionar fechas para filtrar</h2>
+                <div class="fecha_inicio">
+                    <label for="fecha-entrada">Fecha de entrada:</label>
+                    <input type="date" id="fecha-entrada" required>
+                </div>
+                <div class="fecha_salida">
+                    <label for="fecha-salida">Fecha de salida:</label>
+                    <input type="date" id="fecha-salida" required>
+                </div>
+                <button type="submit" class="btn-accion">Filtrar</button>
+            </form>
+        </div>
+        <div class="bungalows_main_list">
         </div>
     </main>
     <footer>
@@ -175,7 +188,7 @@
             <div class="footer_ubicacion_mapa" id="map">
                 <!-- <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3369.2982913704036!2d-58.90117882517629!3d-32.38436474371012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b1b218b1e06aa1%3A0x80055ce589987b6c!2sTermas%20de%20Basavilbaso%20S.A.!5e0!3m2!1ses!2sar!4v1692570395339!5m2!1ses!2sar"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe> -->
             </div>
             <div class="footer_ubicacion_rutas">
@@ -349,6 +362,9 @@
         </div>
     </footer>
     <!-- Scripts -->
+    <!-- Mapa -->
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>    
     <!-- Navbar -->
     <script src="../js/nav.js"></script>
     <script src="../js/bungalows.js"></script>
