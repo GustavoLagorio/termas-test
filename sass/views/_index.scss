@@ -78,6 +78,7 @@
             align-content: center;
             z-index: +1;
             position: relative;
+            box-shadow: (13px 6px 15px rgba(0, 0, 0, 0.60));
 
             h3,
             p {
@@ -138,8 +139,8 @@
     &_predio {
         padding: 1rem;
         background-color: $ligth-blue;
-        margin: 2rem 0;
-        padding: 2rem;        
+        margin: 2rem 0 0 0;
+        padding: 2rem;
 
         h2,
         h3 {
@@ -153,7 +154,7 @@
             margin-bottom: 1rem;
         }
 
-        &_imagenes {            
+        &_imagenes {
             position: static;
             width: 90%;
             margin: 0 5%;
@@ -174,45 +175,44 @@
                 }
             }
         }
+    }
 
-        &_desc {
-            background-image: url(../assets/desc.jpg);
-            width: 90%;
-            margin: 0 5%;
-            padding: 6rem 0;
-            margin-top: 2rem;
-            background-position: center center;
-            background-size: cover;
-            background-repeat: no-repeat;
+    &_desc {
+        background-image: url(../assets/desc.jpg);
+        width: 100%;
+        padding: 6rem 0;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
 
-            .predio_desc {
+        .predio_desc {
+            background-color: $mid-blue;
+            width: 80%;
+            margin: 0 10%;
+            padding: 1rem 0.5rem;
+            display: flex;
+            flex-flow: column nowrap;
+            align-content: center;
+            z-index: +1;
+            position: relative;
+            box-shadow: (13px 6px 15px rgba(0, 0, 0, 0.60));
+
+            h3 {
+                padding: 0;
+            }
+
+            h3,
+            p {
                 background-color: $mid-blue;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+
+            a {
+                color: $background;
+                font-size: 1.2rem;
                 width: 80%;
                 margin: 0 10%;
-                padding: 1rem 0.5rem;
-                display: flex;
-                flex-flow: column nowrap;
-                align-content: center;
-                z-index: +1;
-                position: relative;
-
-                h3 {
-                    padding: 0;
-                }
-
-                h3,
-                p {
-                    background-color: $mid-blue;
-                    text-align: center;
-                    margin-bottom: 1rem;
-                }
-
-                a {
-                    color: $background;
-                    font-size: 1.2rem;
-                    width: 80%;
-                    margin: 0 10%;
-                }
             }
         }
     }
@@ -309,13 +309,13 @@
                     padding: 0.5rem 0 0 0;
                 }
             }
+        }
 
-            &_desc {
+        &_desc {
 
-                .predio_desc {
-                    margin: 0 0 0 50%;
-                    width: 50%;
-                }
+            .predio_desc {
+                width: 60%;
+                margin: 0 20%;
             }
         }
     }
@@ -340,7 +340,7 @@
             &_carrousel {
                 height: 70vh;
             }
-        }        
+        }
     }
 }
 

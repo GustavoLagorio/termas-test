@@ -88,7 +88,6 @@ h6 {
     display: flex;
     flex-flow: column nowrap;
     z-index: +2;
-    padding-left: 2rem;
     position: fixed;
     top: 10vh;
     left: 100%;
@@ -106,11 +105,11 @@ h6 {
         font-weight: 700;
         height: 2rem;
         margin-bottom: 1rem;
-        padding-top: 0.25rem; }
+        padding: 0.25rem 0 0 2rem; }
         .nav_menu .menu_list .list_item a {
           background-color: #4697b4; }
       .nav_menu .menu_list .list_item.activo {
-        margin-left: 1rem; }
+        background-color: #254b5e; }
         .nav_menu .menu_list .list_item.activo a {
           background-color: #254b5e;
           color: #a7d0d2;
@@ -176,7 +175,9 @@ footer {
     display: flex;
     flex-flow: column nowrap;
     align-content: center;
-    position: relative; }
+    position: relative;
+    box-shadow: 13px 6px 15px rgba(0, 0, 0, 0.6);
+    z-index: +1; }
     footer .footer_ubicacion_contacto h3, footer .footer_ubicacion_rutas h3 {
       font-size: 2rem; }
     footer .footer_ubicacion_contacto h3,
@@ -194,7 +195,7 @@ footer {
   footer .footer_ubicacion_mapa {
     height: 60vh;
     width: 100%;
-    z-index: +1; }
+    z-index: 0; }
   footer .footer_ubicacion_rutas ul {
     background-color: #4697b4;
     margin-top: 2rem; }
@@ -363,7 +364,8 @@ footer {
       flex-flow: column nowrap;
       align-content: center;
       z-index: +1;
-      position: relative; }
+      position: relative;
+      box-shadow: 13px 6px 15px rgba(0, 0, 0, 0.6); }
       .home_main_bungalows_reservas h3,
       .home_main_bungalows_reservas p {
         background-color: #4697b4;
@@ -407,7 +409,7 @@ footer {
   .home_main_predio {
     padding: 1rem;
     background-color: #a7d0d2;
-    margin: 2rem 0;
+    margin: 2rem 0 0 0;
     padding: 2rem; }
     .home_main_predio h2,
     .home_main_predio h3 {
@@ -433,37 +435,36 @@ footer {
           height: 100%;
           object-fit: cover;
           object-position: center center; }
-    .home_main_predio_desc {
-      background-image: url(../assets/desc.jpg);
-      width: 90%;
-      margin: 0 5%;
-      padding: 6rem 0;
-      margin-top: 2rem;
-      background-position: center center;
-      background-size: cover;
-      background-repeat: no-repeat; }
-      .home_main_predio_desc .predio_desc {
+  .home_main_desc {
+    background-image: url(../assets/desc.jpg);
+    width: 100%;
+    padding: 6rem 0;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat; }
+    .home_main_desc .predio_desc {
+      background-color: #4697b4;
+      width: 80%;
+      margin: 0 10%;
+      padding: 1rem 0.5rem;
+      display: flex;
+      flex-flow: column nowrap;
+      align-content: center;
+      z-index: +1;
+      position: relative;
+      box-shadow: 13px 6px 15px rgba(0, 0, 0, 0.6); }
+      .home_main_desc .predio_desc h3 {
+        padding: 0; }
+      .home_main_desc .predio_desc h3,
+      .home_main_desc .predio_desc p {
         background-color: #4697b4;
+        text-align: center;
+        margin-bottom: 1rem; }
+      .home_main_desc .predio_desc a {
+        color: #f1e6d2;
+        font-size: 1.2rem;
         width: 80%;
-        margin: 0 10%;
-        padding: 1rem 0.5rem;
-        display: flex;
-        flex-flow: column nowrap;
-        align-content: center;
-        z-index: +1;
-        position: relative; }
-        .home_main_predio_desc .predio_desc h3 {
-          padding: 0; }
-        .home_main_predio_desc .predio_desc h3,
-        .home_main_predio_desc .predio_desc p {
-          background-color: #4697b4;
-          text-align: center;
-          margin-bottom: 1rem; }
-        .home_main_predio_desc .predio_desc a {
-          color: #f1e6d2;
-          font-size: 1.2rem;
-          width: 80%;
-          margin: 0 10%; }
+        margin: 0 10%; }
 
 @media (min-width: 768px) {
   .home_main .reservas {
@@ -516,9 +517,9 @@ footer {
     .home_main_predio_imagenes .predio_imagen.imagen2 {
       grid-area: imagen2;
       padding: 0.5rem 0 0 0; }
-  .home_main_predio_desc .predio_desc {
-    margin: 0 0 0 50%;
-    width: 50%; } }
+  .home_main_desc .predio_desc {
+    width: 60%;
+    margin: 0 20%; } }
 
 @media (min-width: 992px) {
   .home_main .reservas {
@@ -557,7 +558,8 @@ footer {
   .bungalows_main_filtro {
     width: 100%;
     text-align: center;
-    margin: 2rem 0; }
+    margin: 2rem 0;
+    box-shadow: 13px 6px 15px rgba(0, 0, 0, 0.6); }
     .bungalows_main_filtro div,
     .bungalows_main_filtro form,
     .bungalows_main_filtro h2 {
