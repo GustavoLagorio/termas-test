@@ -197,33 +197,34 @@ footer {
     height: 60vh;
     width: 100%;
     z-index: 0; }
-  footer .footer_ubicacion_rutas ul {
-    background-color: #4697b4;
-    margin-top: 2rem; }
-    footer .footer_ubicacion_rutas ul li,
-    footer .footer_ubicacion_rutas ul span {
-      background-color: #4697b4;
-      height: 3rem;
-      text-align: center; }
-      footer .footer_ubicacion_rutas ul li svg,
-      footer .footer_ubicacion_rutas ul span svg {
-        background: none; }
-      footer .footer_ubicacion_rutas ul li button,
-      footer .footer_ubicacion_rutas ul span button {
-        background-color: #4697b4; }
-      footer .footer_ubicacion_rutas ul li a,
-      footer .footer_ubicacion_rutas ul span a {
-        padding: 0;
+  footer .footer_ubicacion_rutas {
+    padding: 2rem 0; }
+    footer .footer_ubicacion_rutas ul {
+      background-color: #4697b4; }
+      footer .footer_ubicacion_rutas ul li,
+      footer .footer_ubicacion_rutas ul span {
         background-color: #4697b4;
-        color: #333333;
-        font-size: 1rem; }
-    footer .footer_ubicacion_rutas ul li {
-      display: flex;
-      justify-content: center;
-      border: 0;
-      width: 100%; }
-      footer .footer_ubicacion_rutas ul li span:last-child {
-        width: 80%; }
+        height: 3rem;
+        text-align: center; }
+        footer .footer_ubicacion_rutas ul li svg,
+        footer .footer_ubicacion_rutas ul span svg {
+          background: none; }
+        footer .footer_ubicacion_rutas ul li button,
+        footer .footer_ubicacion_rutas ul span button {
+          background-color: #4697b4; }
+        footer .footer_ubicacion_rutas ul li a,
+        footer .footer_ubicacion_rutas ul span a {
+          padding: 0;
+          background-color: #4697b4;
+          color: #333333;
+          font-size: 1rem; }
+      footer .footer_ubicacion_rutas ul li {
+        display: flex;
+        justify-content: center;
+        border: 0;
+        width: 100%; }
+        footer .footer_ubicacion_rutas ul li span:last-child {
+          width: 80%; }
   footer .footer_separador {
     background: #254B5E;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -274,7 +275,6 @@ footer {
       footer .footer_ubicacion_rutas {
         grid-area: rutas;
         width: 100%;
-        height: 100%;
         margin: 0; }
         footer .footer_ubicacion_rutas ul {
           display: grid;
@@ -283,9 +283,10 @@ footer {
           height: 100%;
           justify-items: center; }
           footer .footer_ubicacion_rutas ul li {
-            height: 2rem;
-            padding-top: 0.5rem;
-            width: 100%; }
+            height: 1.5rem;
+            width: 100%;
+            margin-bottom: 1rem;
+            align-self: center; }
             footer .footer_ubicacion_rutas ul li span {
               height: 100%; }
               footer .footer_ubicacion_rutas ul li span button {
