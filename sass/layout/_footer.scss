@@ -49,6 +49,7 @@ footer {
 
             ul {
                 background-color: $mid-blue;
+                margin-top: 2rem;
 
                 li,
                 span {
@@ -76,6 +77,7 @@ footer {
                     display: flex;
                     justify-content: center;
                     border: 0;
+                    width: 100%;
 
                     span:last-child {
                         width: 80%;
@@ -126,6 +128,7 @@ footer {
 
 @media (min-width: $sc-mid) {
     footer {
+        margin-top: 20%;        
 
         .footer_ubicacion {
             display: grid;
@@ -172,10 +175,23 @@ footer {
                     li {
                         height: 2rem;
                         padding-top: 0.5rem;
-                        width: 35%;
+                        width: 100%;
                         
                         span {
                             height: 100%;
+
+                            button {
+                                font-size: 1.5rem;
+                            }
+
+                            svg {
+                                height: 100%;
+                                width: 100%;
+                            }
+                        }
+
+                        span:last-child {
+                            width: 50%;
                         }
                     }
                 }

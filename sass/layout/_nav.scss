@@ -114,6 +114,7 @@
         position: static;
         padding: 0;
         background: none;
+        height: 10vh;
 
         .menu_list {
             display: flex;
@@ -155,7 +156,7 @@
         &_titulo {
 
             p {
-                font-size: 2.5rem;
+                font-size: 1.7rem;
             }
 
             p:last-child {

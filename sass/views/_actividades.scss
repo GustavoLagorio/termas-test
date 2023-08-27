@@ -9,7 +9,7 @@
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
-
+        
         h1 {
             font-style: italic;
             font-size: 2.5rem;
@@ -20,21 +20,6 @@
             padding: 10% 0 0 5%;
         }
     }
-
-    /*&_imagen {
-        width: 80%;
-        margin: 10%;
-        background-color: $mid-blue;
-        height: 50vh;
-
-        img {
-            object-position: center center;
-            object-fit: cover;
-            width: 80%;
-            height: 100%;
-            margin: -10% 10% 20% 10%;
-        }
-    }*/
 
     &_list {
 
@@ -83,7 +68,7 @@
             width: 90%;
             display: flex;
             flex-flow: row wrap;
-            margin: 5%;
+            margin: 10% 5%;
 
             &_actividad {
                 display: flex;
