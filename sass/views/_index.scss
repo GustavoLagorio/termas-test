@@ -320,8 +320,21 @@
     .home_main {
 
         .reservas {
-            width: 1.5rem;
-            left: 98%;
+            width: 5%;
+            left: 95%;
+            padding: 1rem;
+            font-size: 1.3rem;
         }
+
+        .reservas:hover {
+            scale: 1.2
+        }
+    }
+}
+
+@media (min-width: $sc-xl) {
+    .home_main {
+        width: 80%;
+        margin: 0 10%;
     }
 }

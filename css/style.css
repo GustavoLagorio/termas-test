@@ -152,6 +152,12 @@ h6 {
           background-color: #254b5e;
           color: #f1e6d2; } }
 
+@media (min-width: 1200px) {
+  .nav_titulo p {
+    font-size: 2.5rem; }
+  .nav_titulo p:last-child {
+    font-size: 1rem; } }
+
 footer {
   margin-top: 6rem; }
   footer .footer_ubicacion h2 {
@@ -495,8 +501,17 @@ footer {
 
 @media (min-width: 992px) {
   .home_main .reservas {
-    width: 1.5rem;
-    left: 98%; } }
+    width: 5%;
+    left: 95%;
+    padding: 1rem;
+    font-size: 1.3rem; }
+  .home_main .reservas:hover {
+    scale: 1.2; } }
+
+@media (min-width: 1200px) {
+  .home_main {
+    width: 80%;
+    margin: 0 10%; } }
 
 .bungalows_main {
   position: relative;
@@ -576,7 +591,7 @@ footer {
   .bungalows_main_list_bungalow.par {
     padding: 0;
     display: grid;
-    grid-template-columns: 55vw 45vw;
+    grid-template-columns: 55% 45%;
     grid-template-rows: 15vh 40vh 20vh;
     grid-template-areas: "titulo imagen" "p imagen" "btn imagen"; }
     .bungalows_main_list_bungalow.par h2 {
@@ -596,7 +611,7 @@ footer {
   .bungalows_main_list_bungalow {
     padding: 0;
     display: grid;
-    grid-template-columns: 45vw 55vw;
+    grid-template-columns: 45% 55%;
     grid-template-rows: 15vh 40vh 20vh;
     grid-template-areas: "imagen titulo" "imagen p" "imagen btn";
     align-content: center; }
@@ -614,6 +629,11 @@ footer {
       height: 100%;
       margin: 0;
       width: 100%; } }
+
+@media (min-width: 1200px) {
+  .bungalows_main {
+    width: 80%;
+    margin: 0 10%; } }
 
 .actividades_main {
   position: relative;
@@ -670,7 +690,7 @@ footer {
 
 @media (min-width: 768px) {
   .actividades_main_list {
-    width: 90vw;
+    width: 90%;
     display: flex;
     flex-flow: row wrap;
     margin: 5%; }
@@ -689,3 +709,11 @@ footer {
           height: 100%; }
     .actividades_main_list_actividad.invertido {
       flex-direction: row-reverse; } }
+
+@media (min-width: 1200px) {
+  .actividades_main {
+    width: 80%;
+    margin: 0 10%; }
+    .actividades_main_list {
+      width: 100%;
+      margin: 5% 0; } }

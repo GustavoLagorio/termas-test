@@ -8,7 +8,7 @@
         background-image: url(../assets/predio1.jpg);
         background-position: center center;
         background-size: cover;
-        background-repeat: no-repeat;
+        background-repeat: no-repeat;        
 
         h1 {
             font-style: italic;
@@ -117,7 +117,7 @@
         &_list_bungalow.par {
             padding: 0;
             display: grid;
-            grid-template-columns: 55vw 45vw;
+            grid-template-columns: 55% 45%;
             grid-template-rows: 15vh 40vh 20vh;
             grid-template-areas:
                 "titulo imagen"
@@ -150,7 +150,7 @@
         &_list_bungalow {
             padding: 0;
             display: grid;
-            grid-template-columns: 45vw 55vw;
+            grid-template-columns: 45% 55%;
             grid-template-rows: 15vh 40vh 20vh;
             grid-template-areas:
                 "imagen titulo"
@@ -180,5 +180,12 @@
                 width: 100%;
             }
         }
+    }
+}
+
+@media (min-width: $sc-xl) {
+    .bungalows_main {
+        width: 80%;
+        margin: 0 10%;
     }
 }

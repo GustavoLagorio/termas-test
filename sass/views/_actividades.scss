@@ -78,9 +78,9 @@
 
 @media (min-width: $sc-mid) {
     .actividades_main {
-        
+
         &_list {
-            width: 90vw;
+            width: 90%;
             display: flex;
             flex-flow: row wrap;
             margin: 5%;
@@ -109,6 +109,17 @@
             &_actividad.invertido {
                 flex-direction: row-reverse;
             }
+        }
+    }
+}
+@media (min-width: $sc-xl) {
+    .actividades_main {
+        width: 80%;
+        margin: 0 10%;
+
+        &_list {
+            width: 100%;
+            margin: 5% 0;
         }
     }
 }
