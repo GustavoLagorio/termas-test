@@ -19,7 +19,7 @@
         border-radius: 0.5rem 0 0 0.5rem;
         background-color: $mid-blue;
         padding: 0.25rem 0;
-        box-shadow: -2px 3px 4px 0px rgba(0, 0, 0, 0.90);
+        box-shadow: (13px 6px 15px rgba(0, 0, 0, 0.60));
         letter-spacing: -5px;
         font-weight: bolder;
 
@@ -325,14 +325,14 @@
     .home_main {
 
         .reservas {
-            width: 5%;
-            left: 95%;
-            padding: 1rem;
+            width: 6%;
+            left: 96%;
+            padding: 1rem 2rem;
             font-size: 1.3rem;
         }
 
         .reservas:hover {
-            scale: 1.2
+            transform: translateX(-2vw);
         }
 
         &_bungalows {
